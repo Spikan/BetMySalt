@@ -55,11 +55,10 @@ public class StreamActivity extends Activity {
 
         String saltyUrl = "http://saltybet.com";
 
-        try {
-            Document doc = Jsoup.connect(saltyUrl).timeout(0).get();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+       // try {
+      //      Document doc = Jsoup.connect(saltyUrl).timeout(0).get();
+      //      e.printStackTrace();
+       // }
     }
 
     @Override
