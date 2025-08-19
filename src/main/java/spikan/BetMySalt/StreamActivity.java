@@ -7,14 +7,7 @@ import android.view.WindowManager;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
-import org.jsoup.HttpStatusException;
-import org.jsoup.Jsoup;
-import org.jsoup.UnsupportedMimeTypeException;
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
 
-import java.io.IOException;
 
 public class StreamActivity extends Activity {
 
@@ -53,12 +46,7 @@ public class StreamActivity extends Activity {
             chat.loadUrl(chatURL);
 
 
-        String saltyUrl = "http://saltybet.com";
 
-       // try {
-      //      Document doc = Jsoup.connect(saltyUrl).timeout(0).get();
-      //      e.printStackTrace();
-       // }
     }
 
     @Override

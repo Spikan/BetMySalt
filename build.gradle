@@ -1,28 +1,41 @@
-apply plugin: 'java'
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.1.4'
+    }
+}
 
-sourceCompatibility = 1.5
-version = '1.0'
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
 
-repositories {
-    mavenCentral()
+apply plugin: 'com.android.application'
+
+android {
+    namespace "com.spikan.BetMySalt"
+    compileSdkVersion 34
+    defaultConfig {
+        applicationId "com.spikan.BetMySalt"
+        minSdkVersion 15
+        targetSdkVersion 34
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-project.txt'
+        }
+    }
 }
 
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.11'
-}
-
-buildscript {
-    repositories {
-        jcenter()
-    }
-
-    dependencies {
-        classpath 'org.javafxports:jfxmobile-plugin:1.0.0-b5'
-    }
-}
-
-apply plugin: 'org.javafxports.jfxmobile'
-
-repositories {
-    jcenter()
+    implementation 'org.jsoup:jsoup:1.15.3'
+    testImplementation 'junit:junit:4.13.2'
 }
